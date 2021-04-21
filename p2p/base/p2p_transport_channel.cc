@@ -982,7 +982,8 @@ void P2PTransportChannel::OnPortReady(PortAllocatorSession* session,
   }
 
   ports_.push_back(port);
-  port->SignalDestroyed.connect(this, &P2PTransportChannel::OnPortDestroyed);
+  port->SubscribePortDestroyed(
+      [this](PortInterface* port) { OnPortDestroyed(port); });
   port->SignalSentPacket.connect(this, &P2PTransportChannel::OnSentPacket);
 
   // Attempt to create a connection from this new port to all of the remote

@@ -91,7 +91,7 @@ std::string RtpDemuxer::DescribePacket(const RtpPacketReceived& packet) {
   return sb.Release();
 }
 
-RtpDemuxer::RtpDemuxer() = default;
+RtpDemuxer::RtpDemuxer(bool use_mid /* = true*/) : use_mid_(use_mid) {}
 
 RtpDemuxer::~RtpDemuxer() {
   // RingRTC change to avoid spurious crashes

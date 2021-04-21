@@ -447,6 +447,11 @@ void RTPSenderVideo::AddRtpHeaderExtensions(
         send_allocation_ == SendVideoLayersAllocation::kSendWithResolution;
     packet->SetExtension<RtpVideoLayersAllocationExtension>(allocation);
   }
+
+  if (first_packet && video_header.video_frame_tracking_id) {
+    packet->SetExtension<VideoFrameTrackingIdExtension>(
+        *video_header.video_frame_tracking_id);
+  }
 }
 
 bool RTPSenderVideo::SendVideo(
@@ -649,8 +654,6 @@ bool RTPSenderVideo::SendVideo(
     if (!packetizer->NextPacket(packet.get()))
       return false;
     RTC_DCHECK_LE(packet->payload_size(), expected_payload_capacity);
-    if (!rtp_sender_->AssignSequenceNumber(packet.get()))
-      return false;
 
     packet->set_allow_retransmission(allow_retransmission);
     packet->set_is_key_frame(video_header.frame_type ==
@@ -671,7 +674,7 @@ bool RTPSenderVideo::SendVideo(
       red_packet->SetPayloadType(*red_payload_type_);
       red_packet->set_is_red(true);
 
-      // Send |red_packet| instead of |packet| for allocated sequence number.
+      // Append |red_packet| instead of |packet| to output.
       red_packet->set_packet_type(RtpPacketMediaType::kVideo);
       red_packet->set_allow_retransmission(packet->allow_retransmission());
       rtp_packets.emplace_back(std::move(red_packet));
@@ -690,6 +693,11 @@ bool RTPSenderVideo::SendVideo(
             << "Sent last RTP packet of the first video frame (pre-pacer)";
       }
     }
+  }
+
+  if (!rtp_sender_->AssignSequenceNumbersAndStoreLastPacketState(rtp_packets)) {
+    // Media not being sent.
+    return false;
   }
 
   LogAndSendToNetwork(std::move(rtp_packets), payload.size());
