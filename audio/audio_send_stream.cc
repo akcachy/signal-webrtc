@@ -948,6 +948,8 @@ void AudioSendStream::UpdateCachedTargetAudioBitrateConstraints() {
 
 // RingRTC change to configure opus
 void AudioSendStream::ConfigureEncoder(const webrtc::AudioEncoder::Config& config) {
+  RTC_DCHECK_RUN_ON(&worker_thread_checker_);
+
   // This makes it so that if BWE changes cause us to change the bitrate,
   // it doesn't actually change.
   config_.min_bitrate_bps = config.min_bitrate_bps;
@@ -956,7 +958,7 @@ void AudioSendStream::ConfigureEncoder(const webrtc::AudioEncoder::Config& confi
     if (!encoder->Configure(config)) {
       RTC_LOG(LS_INFO) << "Failed to configure audio send stream";
     }
-  }
+  });
 }
 
 }  // namespace internal

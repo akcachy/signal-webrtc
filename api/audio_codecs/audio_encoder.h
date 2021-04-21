@@ -22,6 +22,7 @@
 #include "api/call/bitrate_allocation.h"
 #include "api/units/time_delta.h"
 #include "rtc_base/buffer.h"
+#include "rtc_base/logging.h"
 
 namespace webrtc {
 
