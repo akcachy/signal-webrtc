@@ -306,6 +306,7 @@ bool JsepTransportController::SetIncomingRtpEnabled(bool enabled) {
     });
   }
 
+  RTC_DCHECK_RUN_ON(network_thread_);
   for (const auto& jsep_transport : jsep_transports_by_name_) {
     if (!jsep_transport.second->rtp_transport()->SetIncomingRtpEnabled(enabled)) {
       return false;
