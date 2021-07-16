@@ -112,8 +112,7 @@ declare_args() {
   # By default it's only enabled on desktop Linux (excludes ChromeOS) and
   # only when using the sysroot as PipeWire is not available in older and
   # supported Ubuntu and Debian distributions.
-  # rtc_use_pipewire = is_linux && use_sysroot
-  rtc_use_pipewire = false
+  rtc_use_pipewire = is_linux && use_sysroot
 
   # Set this to link PipeWire directly instead of using the dlopen.
   rtc_link_pipewire = false
@@ -179,12 +178,7 @@ declare_args() {
   }
 
   # Determines whether Metal is available on iOS/macOS.
-  rtc_use_metal_rendering =
-    is_mac || (is_ios && current_cpu == "arm64") ||
-    (is_ios && target_environment == "catalyst")
-
-  # Determines whether OpenGL is available on iOS/macOS.
-  rtc_use_opengl_rendering = !(is_ios && target_environment == "catalyst")
+  rtc_use_metal_rendering = is_mac || (is_ios && current_cpu == "arm64")
 
   # When set to false, builtin audio encoder/decoder factories and all the
   # audio codecs they depend on will not be included in libwebrtc.{a|lib}
@@ -291,7 +285,7 @@ declare_args() {
 
 # Make it possible to provide custom locations for some libraries (move these
 # up into declare_args should we need to actually use them for the GN build).
-rtc_libvpx_dir = "//ringrtc_overrides/libvpx"
+rtc_libvpx_dir = "//third_party/libvpx"
 rtc_opus_dir = "//third_party/opus"
 
 # Desktop capturer is supported only on Windows, OSX and Linux.
@@ -963,15 +957,10 @@ if (is_ios) {
       deps = [ ":create_bracket_include_headers_$this_target_name" ]
     }
 
-    if (target_environment == "catalyst") {
-      headers_dir = "Versions/A/Headers"
-    } else {
-      headers_dir = "Headers"
-    }
     copy("copy_umbrella_header_$target_name") {
       sources = [ umbrella_header_path ]
       outputs =
-          [ "$root_out_dir/$output_name.framework/$headers_dir/$output_name.h" ]
+          [ "$root_out_dir/$output_name.framework/Headers/$output_name.h" ]
 
       deps = [ ":umbrella_header_$target_name" ]
     }

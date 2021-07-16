@@ -237,8 +237,6 @@ void RtpDataMediaChannel::OnPacketReceived(rtc::CopyOnWriteBuffer packet,
   //              << ", len=" << data_len;
 
   ReceiveDataParams params;
-  // RingRTC change to use binary, not string, messages
-  params.type = cricket::DMT_BINARY;
   params.ssrc = header.ssrc;
   params.seq_num = header.seq_num;
   params.timestamp = header.timestamp;
@@ -269,8 +267,7 @@ bool RtpDataMediaChannel::SendData(const SendDataParams& params,
     return false;
   }
 
-  // RingRTC change to use binary, not string, messages
-  if (params.type != cricket::DMT_BINARY) {
+  if (params.type != cricket::DMT_TEXT) {
     RTC_LOG(LS_WARNING)
         << "Not sending data because binary type is unsupported.";
     return false;

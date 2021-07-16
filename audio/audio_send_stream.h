@@ -110,9 +110,6 @@ class AudioSendStream final : public webrtc::AudioSendStream,
   size_t TestOnlyGetPerPacketOverheadBytes() const
       RTC_LOCKS_EXCLUDED(overhead_per_packet_lock_);
 
-  // RingRTC change to configure opus
-  void ConfigureEncoder(const webrtc::AudioEncoder::Config& config) override;
-
  private:
   class TimedTransport;
   // Constraints including overhead.

@@ -23,9 +23,8 @@ public class AudioTrack extends MediaStreamTrack {
     nativeSetVolume(getNativeAudioTrack(), volume);
   }
 
-  // RingRTC change to give access to the native track.
   /** Returns a pointer to webrtc::AudioTrackInterface. */
-  public long getNativeAudioTrack() {
+  long getNativeAudioTrack() {
     return getNativeMediaStreamTrack();
   }
 

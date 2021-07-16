@@ -12,7 +12,6 @@ package org.webrtc;
 
 import android.content.Context;
 import android.graphics.Matrix;
-import android.support.annotation.Nullable;
 import android.view.WindowManager;
 import android.view.Surface;
 
@@ -39,9 +38,6 @@ interface CameraSession {
    * If waitCameraStop is true, also waits for the camera to stop.
    */
   void stop();
-
-  // RingRTC change to set frame orientation
-  void setOrientation(@Nullable Integer orientation);
 
   static int getDeviceOrientation(Context context) {
     final WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);

@@ -16,7 +16,6 @@
 #include <string>
 #include <vector>
 
-#include "api/ice_gatherer_interface.h"
 #include "api/transport/enums.h"
 #include "p2p/base/port.h"
 #include "p2p/base/port_interface.h"
@@ -99,12 +98,7 @@ enum class IceRegatheringReason {
   MAX_VALUE
 };
 
-// RingRTC change to default flags
-const uint32_t kDefaultPortAllocatorFlags = (
-  PORTALLOCATOR_ENABLE_SHARED_SOCKET
-  | PORTALLOCATOR_ENABLE_IPV6
-  | PORTALLOCATOR_ENABLE_IPV6_ON_WIFI
-  | PORTALLOCATOR_ENABLE_ANY_ADDRESS_PORTS);
+const uint32_t kDefaultPortAllocatorFlags = 0;
 
 const uint32_t kDefaultStepDelay = 1000;  // 1 sec step delay.
 // As per RFC 5245 Appendix B.1, STUN transactions need to be paced at certain
@@ -412,19 +406,6 @@ class RTC_EXPORT PortAllocator : public sigslot::has_slots<> {
       int component,
       const std::string& ice_ufrag,
       const std::string& ice_pwd);
-
-  // RingRTC change to add ICE forking
-  // Unlike a PortAllocatorSession, an IceGatherer is independent of the
-  // PortAllocator that created it and can live on after the PortAllocator
-  // is destroyed.  It can also be shared, which is useful for ICE forking.
-  // The name is only used for debugging.  The config is based on the
-  // existing PortAllocator config.
-  virtual rtc::scoped_refptr<webrtc::IceGathererInterface> CreateIceGatherer(
-      const std::string& name) {
-    // This default means the PortAllocator does not support creating
-    // IceGatherers.
-    return nullptr;
-  }
 
   // Get an available pooled session and set the transport information on it.
   //

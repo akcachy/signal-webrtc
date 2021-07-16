@@ -64,9 +64,8 @@ public class VideoTrack extends MediaStreamTrack {
     super.dispose();
   }
 
-  // RingRTC change to give access to the native track.
   /** Returns a pointer to webrtc::VideoTrackInterface. */
-  public long getNativeVideoTrack() {
+  long getNativeVideoTrack() {
     return getNativeMediaStreamTrack();
   }
 
