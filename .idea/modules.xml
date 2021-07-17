@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/sdk/android/src/android.iml" filepath="$PROJECT_DIR$/sdk/android/src/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sdk/android/android1.iml" filepath="$PROJECT_DIR$/sdk/android/android1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/androidapp/androidapp.iml" filepath="$PROJECT_DIR$/examples/androidapp/androidapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/androidjunit/androidjunit.iml" filepath="$PROJECT_DIR$/examples/androidjunit/androidjunit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/androidnativeapi/androidnativeapi.iml" filepath="$PROJECT_DIR$/examples/androidnativeapi/androidnativeapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/androidtests/androidtests.iml" filepath="$PROJECT_DIR$/examples/androidtests/androidtests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/androidvoip/androidvoip.iml" filepath="$PROJECT_DIR$/examples/androidvoip/androidvoip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/audio_processing/test/android/apmtest/apmtest.iml" filepath="$PROJECT_DIR$/modules/audio_processing/test/android/apmtest/apmtest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sdk/android/instrumentationtests/instrumentationtests.iml" filepath="$PROJECT_DIR$/sdk/android/instrumentationtests/instrumentationtests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modules/modules.iml" filepath="$PROJECT_DIR$/modules/modules.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rtc_base/rtc_base.iml" filepath="$PROJECT_DIR$/rtc_base/rtc_base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rtc_tools/rtc_tools.iml" filepath="$PROJECT_DIR$/rtc_tools/rtc_tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sdk/android/tests/tests.iml" filepath="$PROJECT_DIR$/sdk/android/tests/tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/examples/unityplugin/unityplugin.iml" filepath="$PROJECT_DIR$/examples/unityplugin/unityplugin.iml" />
+    </modules>
+  </component>
+</project>

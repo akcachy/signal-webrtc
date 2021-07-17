@@ -10,9 +10,9 @@
 
 package org.appspot.apprtc;
 
-import org.webrtc.IceCandidate;
-import org.webrtc.PeerConnection;
-import org.webrtc.SessionDescription;
+import org.cachy.IceCandidate;
+import org.cachy.PeerConnection;
+import org.cachy.SessionDescription;
 
 import java.util.List;
 
