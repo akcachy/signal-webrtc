@@ -58,9 +58,9 @@ void InitializeAndroidObjects() {
 std::unique_ptr<VideoEncoderFactory> CreateAndroidEncoderFactory() {
   JNIEnv* env = AttachCurrentThreadIfNeeded();
   ScopedJavaLocalRef<jclass> factory_class =
-      GetClass(env, "org/webrtc/HardwareVideoEncoderFactory");
+      GetClass(env, "org/cachy/HardwareVideoEncoderFactory");
   jmethodID factory_constructor = env->GetMethodID(
-      factory_class.obj(), "<init>", "(Lorg/webrtc/EglBase$Context;ZZ)V");
+      factory_class.obj(), "<init>", "(Lorg/cachy/EglBase$Context;ZZ)V");
   ScopedJavaLocalRef<jobject> factory_object(
       env, env->NewObject(factory_class.obj(), factory_constructor,
                           nullptr /* shared_context */,
@@ -72,9 +72,9 @@ std::unique_ptr<VideoEncoderFactory> CreateAndroidEncoderFactory() {
 std::unique_ptr<VideoDecoderFactory> CreateAndroidDecoderFactory() {
   JNIEnv* env = AttachCurrentThreadIfNeeded();
   ScopedJavaLocalRef<jclass> factory_class =
-      GetClass(env, "org/webrtc/HardwareVideoDecoderFactory");
+      GetClass(env, "org/cachy/HardwareVideoDecoderFactory");
   jmethodID factory_constructor = env->GetMethodID(
-      factory_class.obj(), "<init>", "(Lorg/webrtc/EglBase$Context;)V");
+      factory_class.obj(), "<init>", "(Lorg/cachy/EglBase$Context;)V");
   ScopedJavaLocalRef<jobject> factory_object(
       env, env->NewObject(factory_class.obj(), factory_constructor,
                           nullptr /* shared_context */));

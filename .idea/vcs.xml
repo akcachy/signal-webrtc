@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/base" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildtools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildtools/clang_format/script" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildtools/third_party/libc++/trunk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildtools/third_party/libc++abi/trunk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buildtools/third_party/libunwind/trunk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/examples/androidtests/third_party/gradle" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/testing" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/android_ndk" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/boringssl/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/breakpad/breakpad" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/catapult" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/ced/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/colorama/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/depot_tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/ffmpeg" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/findbugs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/fontconfig/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/freetype/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/google_benchmark/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/googletest/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/gtest-parallel" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/harfbuzz-ng/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/icu" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/jsoncpp/source" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/junit/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/libFuzzer/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/libaom/source/libaom" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/libjpeg_turbo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/libsrtp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/libunwindstack" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/libvpx/source/libvpx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/libyuv" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/lss" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/mockito/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/nasm" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/openh264/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/perfetto" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/requests/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/turbine/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/ub-uiautomator/lib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/third_party/usrsctp/usrsctplib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tools" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tools/swarming_client" vcs="Git" />
+  </component>
+</project>

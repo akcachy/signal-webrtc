@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="main36" />
+    <orderEntry type="module" module-name="javatests1" />
+    <orderEntry type="module" module-name="android3" />
+    <orderEntry type="module" module-name="test173" />
+    <orderEntry type="module" module-name="main5" />
+    <orderEntry type="module" module-name="test20" />
+    <orderEntry type="module" module-name="unityplugin" />
+    <orderEntry type="module" module-name="instrumentationtests" />
+    <orderEntry type="module" module-name="android2" />
+    <orderEntry type="module" module-name="rtc_base" />
+    <orderEntry type="module" module-name="junit2" />
+    <orderEntry type="module" module-name="public" />
+    <orderEntry type="module" module-name="tests" />
+  </component>
+</module>

@@ -28,7 +28,7 @@ enum class NetworkBindingResult {
 
 // NetworkPreference property set by operating system/firmware that has
 // information about connection strength to e.g WIFI router or CELL base towers.
-// GENERATED_JAVA_ENUM_PACKAGE: org.webrtc
+// GENERATED_JAVA_ENUM_PACKAGE: org.cachy
 enum class NetworkPreference {
   NEUTRAL = 0,
   NOT_PREFERRED = -1,

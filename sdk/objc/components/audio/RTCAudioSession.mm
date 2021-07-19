@@ -21,7 +21,7 @@
 #import "RTCAudioSessionConfiguration.h"
 #import "base/RTCLogging.h"
 
-NSString *const kRTCAudioSessionErrorDomain = @"org.webrtc.RTC_OBJC_TYPE(RTCAudioSession)";
+NSString *const kRTCAudioSessionErrorDomain = @"org.cachy.RTC_OBJC_TYPE(RTCAudioSession)";
 NSInteger const kRTCAudioSessionErrorLockRequired = -1;
 NSInteger const kRTCAudioSessionErrorConfiguration = -2;
 NSString * const kRTCAudioSessionOutputVolumeSelector = @"outputVolume";
